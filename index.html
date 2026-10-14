@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Артур - Веб-розробник</title>
+    <link rel="icon" type="image/png" href="avatar.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#home" class="logo">A<span>.</span></a>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active" data-i18n="nav_home">Головна</a></li>
+                    <li><a href="#about" class="nav__link" data-i18n="nav_about">Про мене</a></li>
+                    <li><a href="#stack" class="nav__link" data-i18n="nav_stack">Стек</a></li>
+                    <li><a href="#portfolio" class="nav__link" data-i18n="nav_portfolio">Робота</a></li>
+                    <li><a href="#workflow" class="nav__link" data-i18n="nav_workflow">Процес</a></li>
+                    <li><a href="#contact" class="nav__link" data-i18n="nav_contact">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <div class="lang-switch">
+                    <button type="button" class="lang-btn active" data-lang="uk">
+                        <img src="https://flagcdn.com/ua.svg" alt="UA" class="lang-flag">
+                        <span>UA</span>
+                    </button>
+                    <span class="lang-divider">/</span>
+                    <button type="button" class="lang-btn" data-lang="ru">
+                        <img src="https://flagcdn.com/ru.svg" alt="RU" class="lang-flag">
+                        <span>RU</span>
+                    </button>
+                </div>
+
+                <button class="burger" id="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </header>
+
+    <!-- Головний екран (Hero) -->
+    <section class="hero" id="home">
+        <div class="hero__bg"></div>
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <img src="https://flagcdn.com/ua.svg" alt="UA" class="badge-flag">
+                    <span class="badge-dot"></span> 
+                    <span data-i18n="hero_badge">Відкритий до замовлень і стажування</span>
+                </div>
+                <h1 class="hero__name" data-i18n="hero_name">Артур</h1>
+                <h2 class="hero__title" data-i18n="hero_title">Початківець веб-розробник</h2>
+                <p class="hero__desc" data-i18n="hero_desc">Живу в Харкові. Нещодавно зайшов у веб-розробку та щодня вдосконалюю навички. Не вигадую штучний досвід: цей сайт створений та зверстаний мною власноруч з нуля і показує те, що я реально вмію робити.</p>
+                
+                <div class="hero__buttons">
+                    <a href="#portfolio" class="btn btn--primary">
+                        <i class="fa-solid fa-code"></i> <span data-i18n="btn_work">Подивитися роботу</span>
+                    </a>
+                    <a href="https://t.me/ducnskd" target="_blank" class="btn btn--outline">
+                        <i class="fa-brands fa-telegram"></i> <span data-i18n="btn_tg">Написати в Telegram</span>
+                    </a>
+                </div>
+
+                <div class="hero__social">
+                    <a href="https://t.me/ducnskd" target="_blank" aria-label="Telegram" title="Telegram">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="https://github.com/planetyadv" target="_blank" aria-label="GitHub" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="mailto:a18999568@gmail.com" aria-label="Email" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero__image">
+                <div class="hero__photo-wrapper">
+                    <div class="avatar-box">
+                        <img src="avatar.png" alt="Артур - Аватар" class="hero__photo">
+                    </div>
+                    <div class="photo-decor"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <a href="#about" aria-label="Вниз">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Про мене -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section__title" data-i18n="about_title">Про мене та мій старт</h2>
+            <div class="about__inner">
+                <div class="about__image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&h=480&fit=crop&auto=format&q=80" alt="Робоче місце веб-розробника">
+                    <div class="about__image-accent"></div>
+                </div>
+                <div class="about__content">
+                    <h3 class="about__subtitle" data-i18n="about_subtitle">Харків, Україна. Чесний підхід і практика</h3>
+                    <p data-i18n="about_text_1">Я нещодавно розпочав свій шлях у веб-розробці. Замість того, щоб вигадувати неіснуючі кейси чи чужі відгуки, я демонструю свій реальний рівень.</p>
+                    <p data-i18n="about_text_2">Цей сайт — моя головна візитка та робота. Тут чиста семантична верстка, акуратні стилі, адаптивність під телефони й планшети та плавний інтерактив без сторонніх перевантажених фреймворків.</p>
+                    <p data-i18n="about_text_3">Мій напрям зараз: адаптивна верстка сайтів, сучасний чистий JavaScript, якісні інтерфейси та увага до структури коду.</p>
+                    
+                    <div class="about__facts">
+                        <div class="fact-item">
+                            <div class="fact-icon">
+                                <img src="https://flagcdn.com/ua.svg" alt="UA" class="fact-flag">
+                            </div>
+                            <div>
+                                <h4 data-i18n="fact_loc_title">Локація: Харків</h4>
+                                <p data-i18n="fact_loc_desc">Працюю віддалено, завжди на зв'язку через Telegram та електронну пошту.</p>
+                            </div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <div>
+                                <h4 data-i18n="fact_pr_title">Практика щодня</h4>
+                                <p data-i18n="fact_pr_desc">Верстка макетів, вивчення стандартів, робота з Git та написання скриптів.</p>
+                            </div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon"><i class="fa-solid fa-handshake"></i></div>
+                            <div>
+                                <h4 data-i18n="fact_ready_title">Готовий до задач</h4>
+                                <p data-i18n="fact_ready_desc">Беруся за верстку блоків, лендингів або навчальні проекти на адекватних умовах.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стек і навички -->
+    <section class="skills section section--alt" id="stack">
+        <div class="container">
+            <h2 class="section__title" data-i18n="stack_title">Мій технологічний стек</h2>
+            <p class="section__subtitle" data-i18n="stack_subtitle">Інструменти та технології, які я використовую та практикую щодня</p>
+            
+            <div class="skills__grid">
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h3 class="skill-card__title">HTML5</h3>
+                    <p class="skill-card__desc" data-i18n="skill_html_desc">Семантична розмітка, доступність, валідна структура сторінки</p>
+                    <div class="skill-card__level">
+                        <span data-i18n="skill_level_base">Впевнена база</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <h3 class="skill-card__title">CSS3</h3>
+                    <p class="skill-card__desc" data-i18n="skill_css_desc">Flexbox, CSS Grid, адаптивність, CSS-змінні, сучасна анімація</p>
+                    <div class="skill-card__level">
+                        <span data-i18n="skill_level_adapt">Адаптив і стилі</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <h3 class="skill-card__title">JavaScript (ES6+)</h3>
+                    <p class="skill-card__desc" data-i18n="skill_js_desc">Робота з DOM, обробка подій, динамічне перемикання тем та мов, валідація</p>
+                    <div class="skill-card__level">
+                        <span data-i18n="skill_level_inter">Інтерактив</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fa-brands fa-git-alt"></i>
+                    </div>
+                    <h3 class="skill-card__title">Git & GitHub</h3>
+                    <p class="skill-card__desc" data-i18n="skill_git_desc">Контроль версій, фіксація змін, публікація робіт на GitHub</p>
+                    <div class="skill-card__level">
+                        <span data-i18n="skill_level_git">Контроль версій</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="skill-card__title" data-i18n="skill_responsive_title">Адаптивна верстка</h3>
+                    <p class="skill-card__desc" data-i18n="skill_responsive_desc">Коректне відображення на мобільних телефонах, планшетах та десктопах</p>
+                    <div class="skill-card__level">
+                        <span data-i18n="skill_level_mobile">Mobile First</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fa-brands fa-figma"></i>
+                    </div>
+                    <h3 class="skill-card__title">Figma в код</h3>
+                    <p class="skill-card__desc" data-i18n="skill_figma_desc">Точний перенос макетів у код із дотриманням відступів, шрифтів та кольорів</p>
+                    <div class="skill-card__level">
+                        <span data-i18n="skill_level_pixel">Pixel-accurate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфоліо / Робота -->
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <h2 class="section__title" data-i18n="work_title">Моя робота</h2>
+            <p class="section__subtitle" data-i18n="work_subtitle">Без вигадок і чужих скріншотів: живе підтвердження поточних навичок</p>
+
+            <div class="portfolio__featured">
+                <div class="featured-card">
+                    <div class="featured-card__media">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=520&fit=crop&auto=format&q=80" alt="Веб-сайт портфоліо">
+                        <div class="featured-card__badge">
+                            <i class="fa-solid fa-star"></i> <span data-i18n="card_main_badge">Головний проект</span>
+                        </div>
+                    </div>
+                    <div class="featured-card__info">
+                        <span class="featured-tag" data-i18n="card_tag">Живий проект</span>
+                        <h3 data-i18n="card_title">Сайт-портфоліо веб-розробника</h3>
+                        <p class="featured-desc" data-i18n="card_desc">Сайт, на якому ви зараз знаходитесь, розроблений мною з нуля. Він вирішує ключову задачу: наочно продемонструвати реальні навички верстки, стилізації та логіки без вигадок.</p>
+                        
+                        <div class="featured-highlights">
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span data-i18n="feat_1">Повна двомовність (Українська та мова на вибір)</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span data-i18n="feat_2">Адаптивна верстка під будь-які роздільні здатності екрана</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span data-i18n="feat_3">Сучасна біло-синя гама з чистим дизайном</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span data-i18n="feat_4">Чистий Vanilla JavaScript без громіздких бібліотек</span>
+                            </div>
+                        </div>
+
+                        <div class="featured-stack">
+                            <span>HTML5</span>
+                            <span>CSS3 (Flex / Grid)</span>
+                            <span>JavaScript ES6+</span>
+                            <span>Font Awesome 6</span>
+                        </div>
+
+                        <div class="featured-actions">
+                            <a href="#home" class="btn btn--primary">
+                                <i class="fa-solid fa-arrow-up"></i> <span data-i18n="btn_top">Початок сайту</span>
+                            </a>
+                            <a href="https://github.com/planetyadv" target="_blank" class="btn btn--outline">
+                                <i class="fa-brands fa-github"></i> <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок планів на пет-проекти -->
+            <div class="future-projects">
+                <h3 class="future-projects__title" data-i18n="future_title">Що я розробляю та вивчаю зараз</h3>
+                <div class="future-grid">
+                    <div class="future-card">
+                        <div class="future-card__icon"><i class="fa-solid fa-shop"></i></div>
+                        <h4 data-i18n="future_1_title">Лендинг сервісу</h4>
+                        <p data-i18n="future_1_desc">Практика конверсійної структури сторінки, плавної анімації та форми замовлення.</p>
+                    </div>
+                    <div class="future-card">
+                        <div class="future-card__icon"><i class="fa-solid fa-list-check"></i></div>
+                        <h4 data-i18n="future_2_title">Таск-менеджер</h4>
+                        <p data-i18n="future_2_desc">Додаток на чистому JavaScript із збереженням списку задач у браузерному сховищі LocalStorage.</p>
+                    </div>
+                    <div class="future-card">
+                        <div class="future-card__icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                        <h4 data-i18n="future_3_title">Віджет погоди через API</h4>
+                        <p data-i18n="future_3_desc">Робота з Fetch API, отримання даних у форматі JSON та динамічне виведення прогнозу.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Процес роботи -->
+    <section class="workflow section section--alt" id="workflow">
+        <div class="container">
+            <h2 class="section__title" data-i18n="flow_title">Як будується співпраця</h2>
+            <p class="section__subtitle" data-i18n="flow_subtitle">Зрозумілі й прозорі етапи від обговорення до готового сайту</p>
+
+            <div class="workflow__steps">
+                <div class="step-card">
+                    <span class="step-card__num">01</span>
+                    <div class="step-card__icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3 data-i18n="flow_1_title">Обговорення</h3>
+                    <p data-i18n="flow_1_desc">Ви розповідаєте про задачу, показуєте макет або референси того, що потрібно зробити.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-card__num">02</span>
+                    <div class="step-card__icon"><i class="fa-solid fa-file-code"></i></div>
+                    <h3 data-i18n="flow_2_title">Верстка</h3>
+                    <p data-i18n="flow_2_desc">Пишу акуратний код, налаштовую шрифти, стилі та обов'язковий мобільний адаптив.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-card__num">03</span>
+                    <div class="step-card__icon"><i class="fa-solid fa-sliders"></i></div>
+                    <h3 data-i18n="flow_3_title">Перевірка</h3>
+                    <p data-i18n="flow_3_desc">Тестую відображення на різних пристроях та правильну роботу всіх кнопок і форм.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-card__num">04</span>
+                    <div class="step-card__icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3 data-i18n="flow_4_title">Здача коду</h3>
+                    <p data-i18n="flow_4_desc">Передаю чистий вихідний код проекту або допомагаю опублікувати його на хостинг.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакти -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section__title" data-i18n="contact_title">Зв'язатися зі мною</h2>
+            <p class="section__subtitle" data-i18n="contact_subtitle">Якщо вам потрібна верстка чи співпраця — пишіть напряму</p>
+
+            <div class="contact__inner">
+                <div class="contact__info">
+                    <h3 data-i18n="contact_info_title">Контакти для зв'язку</h3>
+                    <p data-i18n="contact_info_desc">Відповідаю оперативно протягом дня. Зручніше за все спілкуватися через Telegram.</p>
+
+                    <div class="contact__details">
+                        <div class="contact__item">
+                            <div class="contact__flag-box">
+                                <img src="https://flagcdn.com/ua.svg" alt="UA" class="contact-flag">
+                            </div>
+                            <div>
+                                <span data-i18n="contact_loc_label">Місто</span>
+                                <p data-i18n="contact_loc_val">Харків, Україна</p>
+                            </div>
+                        </div>
+
+                        <a href="https://t.me/ducnskd" target="_blank" class="contact__item">
+                            <i class="fa-brands fa-telegram"></i>
+                            <div>
+                                <span data-i18n="contact_tg_label">Telegram (найшвидше)</span>
+                                <p>@ducnskd</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:a18999568@gmail.com" class="contact__item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <span>Email</span>
+                                <p>a18999568@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/planetyadv" target="_blank" class="contact__item">
+                            <i class="fa-brands fa-github"></i>
+                            <div>
+                                <span>GitHub</span>
+                                <p>github.com/planetyadv</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact__form" id="contactForm">
+                    <div class="form__group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name" data-i18n="form_name">Ваше ім'я</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email" data-i18n="form_email">Ваш Email або Telegram</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
+                        <label for="subject" data-i18n="form_subject">Тема або суть задачі</label>
+                    </div>
+                    <div class="form__group">
+                        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message" data-i18n="form_msg">Опишіть ваше завдання</label>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                        <i class="fa-solid fa-paper-plane"></i> <span data-i18n="form_btn">Надіслати повідомлення</span>
+                    </button>
+                    <p class="form__hint">
+                        <span data-i18n="form_hint">Або пишіть одразу в Telegram:</span> 
+                        <a href="https://t.me/ducnskd" target="_blank">@ducnskd</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Підвал -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__left">
+                <a href="#home" class="logo">A<span>.</span></a>
+                <p data-i18n="footer_desc">Артур — початківець веб-розробник із Харкова</p>
+            </div>
+            <div class="footer__social">
+                <a href="https://t.me/ducnskd" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://github.com/planetyadv" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:a18999568@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footer__copy">
+                <p>2026 Артур. <span data-i18n="footer_rights">Всі права захищено.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка нагору -->
+    <button class="scroll-top" id="scrollTop" aria-label="Нагору">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
